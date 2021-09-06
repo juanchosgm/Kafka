@@ -2,8 +2,7 @@
 ## Configuration to start
 * Download [Kafka](https://kafka.apache.org/downloads)
 * Create a folder where the extracted files will be located
-* Extract the files with WinZip
-* Once the files are extracted run this command on separate command prompt
+* Once the files are extracted run this command on separate Command Prompt
   * `.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties`
   * `.\bin\windows\kafka-server-start.bat .\config\server.properties`
 * Create topics
