@@ -11,7 +11,7 @@
   * `.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 3 --topic ProcessedOrders`
   * `.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 3 --topic ReportedOrders`
 * Verified if every topic was created
-  * `kafka-topics.bat --list --zookeeper localhost:2181`
+  * `.\bin\windows\kafka-topics.bat --list --zookeeper localhost:2181`
 
 ### Create a producer and send messages
 If you wanna test the things easly without any framework help, you can run this command in order to create a producer and consumer just to see how the communication is going on
