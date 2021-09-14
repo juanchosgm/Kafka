@@ -45,7 +45,7 @@ namespace Kafka.Domain
             }
         }
 
-        public async Task<(DeliveryResult<Null, string>, string)> Publish(string topicName, string data)
+        public async Task<(DeliveryResult<Null, string>, string)> PublishAsync(string topicName, string data)
         {
             try
             {

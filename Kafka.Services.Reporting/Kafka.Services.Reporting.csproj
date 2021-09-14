@@ -11,7 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Kafka.Domain.AppSettings\Kafka.Domain.AppSettings.csproj" />
     <ProjectReference Include="..\Kafka.Domain.Models\Kafka.Domain.Models.csproj" />
     <ProjectReference Include="..\Kafka.Domain\Kafka.Domain.csproj" />
   </ItemGroup>
