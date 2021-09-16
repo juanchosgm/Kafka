@@ -38,7 +38,7 @@ namespace Kafka.Services.Inventory
         private static async Task<(Report, bool)> DoInventory(Order order)
         {
             bool isValidated = false;
-            await Task.Delay(1000);
+            await Task.Delay(1);
             Report report = new()
             {
                 Id = Guid.NewGuid(),

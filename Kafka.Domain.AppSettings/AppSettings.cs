@@ -16,7 +16,7 @@ namespace Kafka.Domain.AppSettings
 
         public static string GetTopicName(IConfiguration configuration, string key)
         {
-            return GetConfig(configuration, key)?.FirstOrDefault(c => c.Key.Equals("TopicName")).Value;
+            return GetConfig(configuration, $"Producer:{key}")?.FirstOrDefault(c => c.Key.Equals("TopicName")).Value;
         }
     }
 }

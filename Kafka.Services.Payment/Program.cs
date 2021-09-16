@@ -15,7 +15,7 @@ namespace Kafka.Services.Payment
         {
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .AddJsonFile("appSettings.json", optional: true, reloadOnChange: true).Build();
-            string producerProcessedTopicName = AppSettings.GetTopicName(configuration, "Submitted");
+            string producerProcessedTopicName = AppSettings.GetTopicName(configuration, "Processed");
             string producerReportedTopicName = AppSettings.GetTopicName(configuration, "Reported");
             KafkaService kafkaService = new(configuration);
             while (true)
@@ -38,8 +38,9 @@ namespace Kafka.Services.Payment
         private static async Task<(Report, bool)> DoPaymentProcess(Order order)
         {
             bool isProcessed = false;
-            await Task.Delay(1000);
-            Report report = new Report
+            Console.WriteLine($"Processing Order Id: {order.Id}");
+            await Task.Delay(10000);
+            Report report = new()
             {
                 Id = Guid.NewGuid(),
                 Order = order,
@@ -56,6 +57,7 @@ namespace Kafka.Services.Payment
                 report.Status = Status.PaymentProcessed;
                 isProcessed = true;
             }
+            Console.WriteLine($"Payment Process Result: {report.Status}");
             return (report, isProcessed);
         }
     }
