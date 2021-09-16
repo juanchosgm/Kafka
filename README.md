@@ -1,4 +1,5 @@
 # Kafka with .Net
+This code was created with the support of this [Youtube Channel](https://www.youtube.com/playlist?list=PLktFhp8UIu7LfCv794dI8aPavNoFDj1uP). This is a microservice application with Console Project where you can identify and understand the basic concept of Kafka
 ## Configuration to start
 * Download [Kafka](https://kafka.apache.org/downloads)
 * Create a folder where the extracted files will be located
